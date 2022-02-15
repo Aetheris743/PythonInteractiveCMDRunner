@@ -2,7 +2,7 @@ import subprocess
 import threading
 import queue
 
-class script_interfate:
+class script_interface:
     def __init__(self, command="") -> None:
         self.proc = subprocess.Popen(command, 
             stdin=subprocess.PIPE, 
