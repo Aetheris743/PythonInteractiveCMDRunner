@@ -46,6 +46,9 @@ class script_interface:
                 pass
         return "nothing was recieved"
 
+    def yeild(self, time=0.00000000001) -> None:
+        time.sleep(time)
+
     def close(self) -> None:
         self.proc.stderr.close()
         self.proc.stdin.close()
