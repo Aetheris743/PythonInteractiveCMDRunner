@@ -35,6 +35,17 @@ class script_interface:
             pass
         return output.decode("utf-8")
 
+    def get_response(self, timeout=10) -> str:
+        starttime = time.time()
+        while time.time() - starttime < timeout:
+            try:
+                output = self.q.get_nowait()
+                time.sleep(0.000000001)
+                return output.decode("utf-8")
+            except:
+                pass
+        return "nothing was recieved"
+
     def close(self) -> None:
         self.proc.stderr.close()
         self.proc.stdin.close()
