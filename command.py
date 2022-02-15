@@ -1,6 +1,7 @@
 import subprocess
 import threading
 import queue
+import time
 
 class script_interface:
     def __init__(self, command="") -> None:
@@ -24,6 +25,9 @@ class script_interface:
         self.proc.stdin.flush()
 
     def read(self) -> str:
+        # yeild for a little so the other thread can execute
+        time.sleep(0.00000000001)
+        # get the output
         output = b"nothing found yet"
         try:
             output = self.q.get_nowait()
