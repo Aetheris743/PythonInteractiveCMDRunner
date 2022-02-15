@@ -50,6 +50,7 @@ class script_interface:
         time.sleep(time)
 
     def close(self) -> None:
+        self.yeild_to(0.0001)
         self.proc.stderr.close()
         self.proc.stdin.close()
         self.proc.stdout.close()
