@@ -6,7 +6,7 @@ A simple beginner-friendly python library that allows the easy automation of com
 
 ## Useage
 
-To run a command, create an instance of the ```script_interface(command)``` class with the command passed as a string to the constructor. Depending on what you want to do you can wait for the program to write to stdout, write to stdin, or wait for the program to finish executing.
+To run a command, import the python file then create an instance of the ```script_interface(command)``` class with the command passed as a string to the constructor. Depending on what you want to do you can wait for the program to write to stdout, write to stdin, or wait for the program to finish executing.
 
 ## Methods
 
