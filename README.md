@@ -1,5 +1,5 @@
 # Python Interactive CMD Runner
-A python library that allows the easy automation of command-line utilities in a subprocess
+A simple beginner-friendly python library that allows the easy automation of command-line utilities in a subprocess
 
 - run single commands (ex. ```echo this is a test```)
 - run interactive commands or programs that require writing to stdin and reading from stdout
